@@ -1,9 +1,195 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>BASESTACK</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASESTACK - Backend as a Service</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #09090B;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        a {
+            color: #06B6D4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1F2937;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            color: #D1D5DB;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            background-color: #06B6D4;
+            color: #09090B;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0891B2;
+        }
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature {
+            text-align: center;
+        }
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .feature p {
+            color: #D1D5DB;
+        }
+        /* Code Section */
+        .code-section {
+            padding: 80px 0;
+            background-color: #1F2937;
+        }
+        .code-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .code-block {
+            background-color: #09090B;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .code-highlight {
+            color: #06B6D4;
+        }
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #1F2937;
+            text-align: center;
+            color: #D1D5DB;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to BASESTACK</h1>
-    <p>BASESTACK is a comprehensive platform for building and deploying web applications.</p>
+    <header class="container">
+        <div class="logo">BASESTACK</div>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero container">
+        <h1>Build Backends Faster with BASESTACK</h1>
+        <p>Backend as a Service for developers. Scalable, secure, and serverless. Focus on your code, not infrastructure.</p>
+        <a href="#get-started" class="cta-button">Get Started</a>
+    </section>
+    <section id="features" class="features container">
+        <h2>Why Choose BASESTACK?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Serverless Scaling</h3>
+                <p>Automatically scale your backend without managing servers. Handle millions of requests effortlessly.</p>
+            </div>
+            <div class="feature">
+                <h3>Built-in Security</h3>
+                <p>Enterprise-grade security with encryption, authentication, and compliance out of the box.</p>
+            </div>
+            <div class="feature">
+                <h3>Developer Tools</h3>
+                <p>Integrate with your favorite frameworks. SDKs for JavaScript, Python, and more.</p>
+            </div>
+        </div>
+    </section>
+    <section class="code-section container">
+        <h2>Get Started in Minutes</h2>
+        <p>Install the SDK and deploy your first backend.</p>
+        <div class="code-block">
+            <pre><code>// Install BASESTACK SDK
+<span class="code-highlight">npm install @basestack/sdk</span>
+
+// Initialize your app
+import { Basestack } from '@basestack/sdk';
+
+const app = new Basestack({
+  apiKey: '<span class="code-highlight">your-api-key</span>'
+});
+
+// Deploy a simple endpoint
+app.post('/api/hello', (req, res) => {
+  res.json({ message: 'Hello from BASESTACK!' });
+});
+
+app.listen();</code></pre>
+        </div>
+    </section>
+    <footer class="container">
+        <p>&copy; 2023 BASESTACK. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </footer>
 </body>
 </html>
